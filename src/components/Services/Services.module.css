@@ -1,0 +1,220 @@
+.services {
+  position: relative;
+  padding: 5rem 0;
+  background: #FAFAF7;
+  overflow: hidden;
+}
+
+/* Background Circles - Darker */
+.backgroundCircles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.circle1 {
+  position: absolute;
+  top: -8rem;
+  right: -8rem;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: rgba(14, 138, 98, 0.12);
+  filter: blur(3rem);
+}
+
+.circle2 {
+  position: absolute;
+  bottom: -8rem;
+  left: -8rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: rgba(14, 138, 98, 0.10);
+  filter: blur(3rem);
+}
+
+.circle3 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: rgba(14, 138, 98, 0.08);
+  filter: blur(2.5rem);
+}
+
+/* Left Column */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Label */
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0E8A62;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+/* Main Headline */
+.headline {
+  margin-top: 1rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #1D2A39;
+}
+
+.headlineAccent {
+  color: #0E8A62;
+}
+
+/* Description */
+.description {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: #6B7280;
+  max-width: 70%;
+  line-height: 1.7;
+}
+
+/* Process Image */
+.processImageWrapper {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.processImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right Column - Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Service Card */
+.serviceCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: #0E8A62;
+  transform: translateY(-4px);
+}
+
+/* Icon Container */
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(14, 138, 98, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.serviceCard:hover .iconContainer {
+  background: rgba(14, 138, 98, 0.18);
+}
+
+.iconImage {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1D2A39;
+  transition: color 0.3s ease;
+}
+
+.serviceCard:hover .cardTitle {
+  color: #0E8A62;
+}
+
+/* Card Description */
+.cardDescription {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-top: 0.375rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 3rem 0;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .processImageWrapper {
+    max-width: 100%;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .serviceCard {
+    padding: 1rem;
+  }
+
+  .iconContainer {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .iconImage {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

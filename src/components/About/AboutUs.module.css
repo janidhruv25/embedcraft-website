@@ -1,0 +1,256 @@
+.about {
+  position: relative;
+  padding: 5rem 0;
+  background: #FAFAF7;
+  overflow: hidden;
+}
+
+/* Background Circles */
+.backgroundCircles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.circle1 {
+  position: absolute;
+  top: -8rem;
+  right: -8rem;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: rgba(14, 138, 98, 0.08);
+  filter: blur(3rem);
+}
+
+.circle2 {
+  position: absolute;
+  bottom: -8rem;
+  left: -8rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: rgba(14, 138, 98, 0.06);
+  filter: blur(3rem);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0E8A62;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1D2A39;
+  margin-top: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #6B7280;
+  margin-top: 0.75rem;
+  line-height: 1.7;
+}
+
+/* Team Container */
+.teamContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* Team Member */
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Photo */
+.photoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 14rem;
+  margin-bottom: 1.5rem;
+}
+
+.photoContainer {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #E5E7EB;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.teamMember:hover .photoContainer {
+  border-color: #0E8A62;
+  box-shadow: 0 8px 30px rgba(14, 138, 98, 0.15);
+}
+
+/* Fix: Image positioning to prevent head cutting */
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+/* Optional: Subtle zoom on hover */
+.teamMember:hover .photo {
+  transform: scale(1.03);
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #0E8A62, #1D2A39);
+}
+
+/* Info */
+.info {
+  margin-top: 0.5rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1D2A39;
+  letter-spacing: 0.02em;
+}
+
+.role {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0E8A62;
+  margin-top: 0.25rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: #6B7280;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  max-width: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA */
+.ctaContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0E8A62;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid #0E8A62;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.learnMore:hover {
+  background: #0E8A62;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 138, 98, 0.2);
+}
+
+.arrowIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.learnMore:hover .arrowIcon {
+  transform: translate(4px, -4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .teamContainer {
+    gap: 2rem;
+  }
+
+  .photoContainer {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 0;
+  }
+
+  .teamContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 20rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .photoContainer {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .circle1,
+  .circle2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .photoContainer {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.75rem;
+  }
+
+  .description {
+    font-size: 0.7rem;
+    max-width: 12rem;
+  }
+}

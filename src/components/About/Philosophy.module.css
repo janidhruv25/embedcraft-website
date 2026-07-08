@@ -1,0 +1,118 @@
+.philosophy {
+  padding: 4rem 0 5rem;
+  background: #FAFAF7;
+}
+
+.content {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0E8A62;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1D2A39;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.valueCard {
+  background: white;
+  padding: 1.5rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  border-color: #0E8A62;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.valueTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1D2A39;
+  margin-bottom: 0.5rem;
+}
+
+.valueDescription {
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+.closing {
+  font-size: 1.1rem;
+  color: #1D2A39;
+  line-height: 1.8;
+  max-width: 36rem;
+  margin: 0 auto;
+  font-weight: 400;
+  border-top: 1px solid #E5E7EB;
+  padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .philosophy {
+    padding: 3rem 0;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .valueCard {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .closing {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .philosophy {
+    padding: 2rem 0;
+  }
+
+  .valueCard {
+    padding: 1rem 1.25rem;
+  }
+
+  .valueTitle {
+    font-size: 0.9rem;
+  }
+
+  .valueDescription {
+    font-size: 0.8rem;
+  }
+
+  .closing {
+    font-size: 0.9rem;
+  }
+}
